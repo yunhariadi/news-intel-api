@@ -1,0 +1,7 @@
+[
+  {"entity_id": "per_smi", "canonical_name": "Sri Mulyani Indrawati", "entity_type": "PERSON", "acronyms": [], "aliases": ["sri mulyani"]},
+  {"entity_id": "per_prabowo", "canonical_name": "Prabowo Subianto", "entity_type": "PERSON", "acronyms": [], "aliases": ["prabowo"]},
+  {"entity_id": "per_jokowi", "canonical_name": "Joko Widodo", "entity_type": "PERSON", "acronyms": [], "aliases": ["jokowi"]},
+  {"entity_id": "per_perry", "canonical_name": "Perry Warjiyo", "entity_type": "PERSON", "acronyms": [], "aliases": []},
+  {"entity_id": "per_erick", "canonical_name": "Erick Thohir", "entity_type": "PERSON", "acronyms": [], "aliases": []}
+]

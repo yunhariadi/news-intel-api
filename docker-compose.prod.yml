@@ -1,0 +1,21 @@
+# All-in-one production stack: ONE API container that also runs real-feed
+# ingestion in-process (ENABLE_SCHEDULER=true), so it serves real Indonesian
+# news without a separate worker or a database (memory backend).
+#
+#   cp .env.example .env   # then edit: see DEPLOY.md
+#   docker compose -f docker-compose.prod.yml up -d --build
+#
+# Put a TLS reverse proxy (Caddy/nginx) in front — see DEPLOY.md. Only expose
+# 127.0.0.1:8000 here so the proxy is the public entrypoint.
+services:
+  api:
+    build: .
+    command: uvicorn apps.api.main:app --host 0.0.0.0 --port 8000
+    restart: unless-stopped
+    env_file: [.env]
+    environment:
+      ENABLE_SCHEDULER: "true"
+      DEV_SEED: "false"
+      STORE_BACKEND: "memory"
+    ports:
+      - "127.0.0.1:8000:8000"

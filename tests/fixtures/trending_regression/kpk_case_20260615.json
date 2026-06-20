@@ -1,0 +1,26 @@
+{
+  "scenario": "On 2026-06-15 a KPK corruption case broke, independently covered by five outlets; meanwhile an ANTARA sports wire was republished by six carriers, and an economy topic ran steadily.",
+  "as_of_hours": 1000.0,
+  "window": "24h",
+  "expect_top_topic": "korupsi",
+  "expect_eligible_contains": ["korupsi", "ekonomi"],
+  "expect_ineligible_or_absent": ["olahraga"],
+  "articles": [
+    {"id": "kpk1", "source": "antara", "origin": "antara", "age_hours": 2.0, "topics": ["korupsi"]},
+    {"id": "kpk2", "source": "kompas", "origin": "kompas", "age_hours": 2.5, "topics": ["korupsi"]},
+    {"id": "kpk3", "source": "cnbc", "origin": "cnbc", "age_hours": 3.0, "topics": ["korupsi"]},
+    {"id": "kpk4", "source": "tempo", "origin": "tempo", "age_hours": 3.5, "topics": ["korupsi"]},
+    {"id": "kpk5", "source": "detik", "origin": "detik", "age_hours": 4.0, "topics": ["korupsi"]},
+
+    {"id": "spo1", "source": "antara", "origin": "antara", "age_hours": 1.0, "topics": ["olahraga"]},
+    {"id": "spo2", "source": "tribun", "origin": "antara", "age_hours": 1.1, "topics": ["olahraga"]},
+    {"id": "spo3", "source": "kompas", "origin": "antara", "age_hours": 1.2, "topics": ["olahraga"]},
+    {"id": "spo4", "source": "detik", "origin": "antara", "age_hours": 1.3, "topics": ["olahraga"]},
+    {"id": "spo5", "source": "cnbc", "origin": "antara", "age_hours": 1.4, "topics": ["olahraga"]},
+    {"id": "spo6", "source": "okezone", "origin": "antara", "age_hours": 1.5, "topics": ["olahraga"]},
+
+    {"id": "eko1", "source": "kompas", "origin": "kompas", "age_hours": 11.0, "topics": ["ekonomi"]},
+    {"id": "eko2", "source": "cnbc", "origin": "cnbc", "age_hours": 12.0, "topics": ["ekonomi"]},
+    {"id": "eko3", "source": "bisnis", "origin": "bisnis", "age_hours": 13.0, "topics": ["ekonomi"]}
+  ]
+}

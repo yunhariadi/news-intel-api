@@ -1,0 +1,25 @@
+{
+  "scenario": "Labeled same-event set. Each article has a gold event id; the clusterer's partition is scored against it on same-event article pairs.",
+  "articles": [
+    {"id": "k1", "hours": 0.0, "origin": "antara", "actors": ["kpk"], "regions": [], "topics": ["korupsi"], "event": "kpk_a"},
+    {"id": "k2", "hours": 3.0, "origin": "kompas", "actors": ["kpk"], "regions": [], "topics": ["korupsi"], "event": "kpk_a"},
+    {"id": "k3", "hours": 6.0, "origin": "cnbc", "actors": ["kpk"], "regions": [], "topics": ["korupsi"], "event": "kpk_a"},
+    {"id": "k6", "hours": 8.0, "origin": "tempo", "actors": ["kpk"], "regions": [], "topics": ["hukum"], "event": "kpk_a"},
+
+    {"id": "b1", "hours": 2.0, "origin": "antara", "actors": ["bi"], "regions": [], "topics": ["moneter"], "event": "bi"},
+    {"id": "b2", "hours": 5.0, "origin": "bisnis", "actors": ["bi"], "regions": [], "topics": ["moneter"], "event": "bi"},
+
+    {"id": "f1", "hours": 1.0, "origin": "antara", "actors": [], "regions": ["reg_medan"], "topics": ["bencana"], "event": "flood"},
+    {"id": "f2", "hours": 4.0, "origin": "kompas", "actors": [], "regions": ["reg_medan"], "topics": ["bencana"], "event": "flood"},
+    {"id": "f3", "hours": 7.0, "origin": "detik", "actors": [], "regions": ["reg_medan"], "topics": ["bencana"], "event": "flood"},
+
+    {"id": "mp1", "hours": 9.0, "origin": "tribun", "actors": [], "regions": ["reg_medan"], "topics": ["politik"], "event": "medan_politik"},
+
+    {"id": "k4", "hours": 100.0, "origin": "antara", "actors": ["kpk"], "regions": [], "topics": ["korupsi"], "event": "kpk_b"},
+    {"id": "k5", "hours": 103.0, "origin": "kompas", "actors": ["kpk"], "regions": [], "topics": ["korupsi"], "event": "kpk_b"},
+
+    {"id": "s1", "hours": 10.0, "origin": "cnbc", "actors": ["erick"], "regions": [], "topics": ["ekonomi"], "event": "erick_solo"},
+    {"id": "s2", "hours": 12.0, "origin": "antara", "actors": [], "regions": ["reg_bali"], "topics": ["olahraga"], "event": "bali_solo"}
+  ],
+  "thresholds": {"precision": 0.85, "recall": 0.85}
+}

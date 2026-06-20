@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ruff check *)",
+      "Bash(python3 *)",
+      "Bash(mypy packages *)",
+      "Bash(make lint *)",
+      "Bash(make test *)",
+      "Bash(command -v docker)",
+      "Bash(docker compose *)",
+      "Bash(mypy apps *)",
+      "Bash(make gate *)",
+      "Bash(pkill -f \"port 8078\")",
+      "Bash(lsof -ti:8078)",
+      "Bash(xargs kill -9)"
+    ]
+  }
+}

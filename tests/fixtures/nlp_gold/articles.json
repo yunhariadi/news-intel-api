@@ -1,0 +1,162 @@
+[
+  {
+    "id": "g01",
+    "title": "Bank Indonesia Tahan Suku Bunga Acuan",
+    "excerpt": "Gubernur BI Perry Warjiyo mengatakan inflasi terkendali dan rupiah stabil.",
+    "category": "Ekonomi",
+    "topics": ["moneter"],
+    "actors": ["org_bi", "per_perry"],
+    "regions": [],
+    "quote_speakers": []
+  },
+  {
+    "id": "g02",
+    "title": "KPK Periksa Pejabat soal Dugaan Korupsi",
+    "excerpt": "Penyidik KPK mendalami aliran dana dalam kasus suap di Jakarta.",
+    "category": "Hukum",
+    "topics": ["korupsi"],
+    "actors": ["org_kpk"],
+    "regions": ["reg_dki"],
+    "quote_speakers": []
+  },
+  {
+    "id": "g03",
+    "title": "Sri Mulyani Paparkan Realisasi APBN",
+    "excerpt": "\"Belanja negara efisien,\" kata Sri Mulyani Indrawati di DPR.",
+    "category": "Ekonomi",
+    "topics": ["fiskal"],
+    "actors": ["per_smi", "org_dpr"],
+    "regions": [],
+    "quote_speakers": ["per_smi"]
+  },
+  {
+    "id": "g04",
+    "title": "Banjir Melanda Surabaya",
+    "excerpt": "Ribuan rumah terendam banjir di Surabaya akibat hujan deras.",
+    "category": "Nasional",
+    "topics": ["bencana"],
+    "actors": [],
+    "regions": ["reg_surabaya"],
+    "quote_speakers": []
+  },
+  {
+    "id": "g05",
+    "title": "Pertamina Sesuaikan Harga BBM",
+    "excerpt": "Pertamina mengumumkan penyesuaian harga BBM nonsubsidi pekan ini.",
+    "category": "Energi",
+    "topics": ["energi"],
+    "actors": ["org_pertamina"],
+    "regions": [],
+    "quote_speakers": []
+  },
+  {
+    "id": "g06",
+    "title": "OJK Perketat Pengawasan Perbankan",
+    "excerpt": "\"Likuiditas perbankan terjaga,\" ujar pejabat OJK.",
+    "category": "Ekonomi",
+    "topics": ["perbankan"],
+    "actors": ["org_ojk"],
+    "regions": [],
+    "quote_speakers": []
+  },
+  {
+    "id": "g07",
+    "title": "Prabowo Subianto Resmikan Proyek Infrastruktur",
+    "excerpt": "Presiden Prabowo Subianto meresmikan jalan tol baru di Jawa Barat.",
+    "category": "Nasional",
+    "topics": ["infrastruktur"],
+    "actors": ["per_prabowo"],
+    "regions": ["reg_jabar"],
+    "quote_speakers": []
+  },
+  {
+    "id": "g08",
+    "title": "Gempa Guncang Bali",
+    "excerpt": "Gempa berkekuatan magnitudo 5 mengguncang wilayah Bali tadi malam.",
+    "category": "Nasional",
+    "topics": ["bencana"],
+    "actors": [],
+    "regions": ["reg_bali"],
+    "quote_speakers": []
+  },
+  {
+    "id": "g09",
+    "title": "Erick Thohir Bicara Kinerja BUMN",
+    "excerpt": "\"Laba BUMN meningkat,\" kata Erick Thohir, \"target tercapai.\"",
+    "category": "Ekonomi",
+    "topics": ["ekonomi"],
+    "actors": ["per_erick"],
+    "regions": [],
+    "quote_speakers": ["per_erick"]
+  },
+  {
+    "id": "g10",
+    "title": "IHSG Ditutup Menguat",
+    "excerpt": "Indeks harga saham gabungan menguat didorong aksi beli emiten perbankan.",
+    "category": "Market",
+    "topics": ["pasar_modal"],
+    "actors": [],
+    "regions": [],
+    "quote_speakers": []
+  },
+  {
+    "id": "g11",
+    "title": "DPR Sahkan Revisi Undang-Undang",
+    "excerpt": "Rapat paripurna DPR mengesahkan revisi undang-undang di Jakarta.",
+    "category": "Politik",
+    "topics": ["politik"],
+    "actors": ["org_dpr"],
+    "regions": ["reg_dki"],
+    "quote_speakers": []
+  },
+  {
+    "id": "g12",
+    "title": "Joko Widodo Tinjau Pelabuhan",
+    "excerpt": "\"Konektivitas penting,\" kata Joko Widodo. \"Logistik harus lancar,\" katanya.",
+    "category": "Nasional",
+    "topics": ["infrastruktur"],
+    "actors": ["per_jokowi"],
+    "regions": [],
+    "quote_speakers": ["per_jokowi"]
+  },
+  {
+    "id": "g13",
+    "title": "Kasus Korupsi di Medan Disidik",
+    "excerpt": "Kejaksaan Agung menyidik dugaan korupsi proyek di Medan.",
+    "category": "Hukum",
+    "topics": ["korupsi"],
+    "actors": ["agency_kejagung"],
+    "regions": ["reg_medan"],
+    "quote_speakers": []
+  },
+  {
+    "id": "g14",
+    "title": "Harga Nikel Dunia Naik",
+    "excerpt": "Harga nikel dan batu bara menguat di tengah permintaan global.",
+    "category": "Ekonomi",
+    "topics": ["komoditas"],
+    "actors": [],
+    "regions": [],
+    "quote_speakers": []
+  },
+  {
+    "id": "g15",
+    "title": "Kemenkes Luncurkan Program Vaksin",
+    "excerpt": "Kementerian Kesehatan meluncurkan program vaksin baru untuk masyarakat.",
+    "category": "Kesehatan",
+    "topics": ["kesehatan"],
+    "actors": ["org_kemenkes"],
+    "regions": [],
+    "quote_speakers": []
+  },
+  {
+    "id": "g16",
+    "title": "Mahkamah Konstitusi Bacakan Putusan",
+    "excerpt": "\"Putusan bersifat final,\" kata hakim Mahkamah Konstitusi di Jakarta.",
+    "category": "Hukum",
+    "topics": ["hukum"],
+    "actors": ["court_mk"],
+    "regions": ["reg_dki"],
+    "quote_speakers": []
+  }
+]

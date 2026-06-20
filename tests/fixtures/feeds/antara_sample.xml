@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>ANTARA News - Ekonomi</title>
+    <link>https://www.antaranews.com/ekonomi</link>
+    <description>Berita ekonomi terkini</description>
+    <language>id</language>
+    <item>
+      <title>Pemerintah umumkan kebijakan subsidi energi baru</title>
+      <link>https://www.antaranews.com/berita/100001/subsidi-energi?utm_source=rss&amp;utm_medium=feed&amp;ref=home</link>
+      <description>&lt;p&gt;Menteri menyampaikan rincian kebijakan subsidi energi dalam konferensi pers di Jakarta. Kebijakan ini mencakup penyesuaian harga, alokasi anggaran, dan mekanisme penyaluran kepada masyarakat yang berhak menerima bantuan langsung selama periode transisi tahun anggaran berjalan, serta evaluasi berkala oleh kementerian terkait untuk memastikan tepat sasaran.&lt;/p&gt;</description>
+      <pubDate>Mon, 16 Jun 2026 08:30:00 +0700</pubDate>
+      <category>Ekonomi</category>
+    </item>
+    <item>
+      <title>Bank sentral pertahankan suku bunga acuan</title>
+      <link>https://www.antaranews.com/berita/100002/suku-bunga</link>
+      <description>Rapat dewan gubernur memutuskan menahan suku bunga.</description>
+      <pubDate>Mon, 16 Jun 2026 14:05:00 +0700</pubDate>
+      <category>Ekonomi</category>
+    </item>
+    <item>
+      <title>Item tanpa tautan harus dilewati</title>
+      <description>Item ini tidak memiliki link sehingga tidak dapat diingest.</description>
+      <pubDate>Mon, 16 Jun 2026 09:00:00 +0700</pubDate>
+    </item>
+  </channel>
+</rss>
