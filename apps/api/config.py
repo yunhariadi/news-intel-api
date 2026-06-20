@@ -45,6 +45,14 @@ class Settings(BaseSettings):
     # is open; deployments set REQUIRE_API_KEY=true.
     require_api_key: bool = False
 
+    # When set, register this plaintext key in the serving process's access
+    # store at startup, so an authed deployment has a durable, restart-stable
+    # key (the access store is in-memory and per-process; a key minted via
+    # `docker compose exec` lives in a *different* process and the server never
+    # sees it). Use a value shaped like a real key, e.g. "nik_<random>".
+    seed_api_key: str = ""
+
+
     # Dev convenience: when true, the API seeds demo data through the full
     # pipeline on startup so endpoints return real results locally.
     dev_seed: bool = False

@@ -90,24 +90,31 @@ sudo ufw enable          # 8000 stays internal — only Caddy reaches it
 
 ---
 
-## 7. Mint an API key and use it
+## 7. Set an API key and use it
 
 With `REQUIRE_API_KEY=true`, all `/v1/*` routes (except `/v1/health`) need a key.
-Generate one from inside the running container:
+The access store is in-memory and **per-process**, so a key minted via
+`docker compose exec` lives in a *different* process than the server and won't
+work. Instead, seed a durable key at startup via `SEED_API_KEY` in `.env`:
 
 ```bash
-docker compose -f docker-compose.prod.yml exec api python3 - <<'PY'
-from apps.repository import get_default_access_store
-from packages.access.tiers import Tier
-key = get_default_access_store().issue_key("customer-1", Tier.BUSINESS)
-print("API KEY:", key)
-PY
+# pick a key shaped like a real one (the nik_ prefix is required):
+echo "SEED_API_KEY=nik_$(openssl rand -hex 32)" >> .env
+docker compose -f docker-compose.prod.yml up -d   # recreate so it picks up .env
 ```
 
-> Note (current scaffold): keys live in the API process's memory, so they reset
-> on container restart. For durable keys, mint them at startup with a small hook
-> or move the access store to SQL (deferred — see DESIGN.md). For a stable
-> single key now, you can hardcode one via a startup seed.
+The server registers that exact value as a Business **admin** key on startup
+(see `apps/api/main.py` lifespan). It survives restarts because it is re-seeded
+from `.env` every boot. Use it directly as the bearer token:
+
+```bash
+KEY=nik_the_value_you_put_in_env
+```
+
+> Note: in-memory enrichment/trending/events still reset on restart and rebuild
+> from the next feed window — only the **key** is now durable. For multi-process
+> / horizontal scaling, move the access store to SQL (deferred — see DESIGN.md).
+
 
 Then call it:
 

@@ -145,10 +145,20 @@ async def lifespan(_app: FastAPI) -> AsyncIterator[None]:
       (the all-in-one deployment that serves real news).
     """
     cfg = get_settings()
+    if cfg.seed_api_key:
+        # Register a durable, restart-stable key in THIS (serving) process's
+        # access store. A key minted via `docker compose exec` lives in a
+        # separate process and the server never sees it — see config.py.
+        from packages.access.tiers import Tier
+
+        get_default_access_store().register_plaintext(
+            cfg.seed_api_key, "seed", Tier.BUSINESS, is_admin=True
+        )
     if cfg.dev_seed:
         from apps.dev_seed import seed_default_stores
 
         seed_default_stores()
+
     scheduler = None
     if cfg.enable_scheduler:
         from apps.scheduler import start_scheduler
