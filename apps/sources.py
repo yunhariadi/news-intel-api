@@ -26,11 +26,13 @@ class RegisteredSource:
 
 
 _ANTARA = SourceConfig(source_id="antara", name="ANTARA", is_wire=True, default_tz=_JKT)
-_KOMPAS = SourceConfig(source_id="kompas", name="Kompas", default_tz=_JKT)
 _CNBC = SourceConfig(source_id="cnbc", name="CNBC Indonesia", default_tz=_JKT)
 _CNN = SourceConfig(source_id="cnnid", name="CNN Indonesia", default_tz=_JKT)
-_TEMPO = SourceConfig(source_id="tempo", name="Tempo", default_tz=_JKT)
 
+# Tempo (rss.tempo.co → 403, blocks non-browser User-Agents) and Kompas
+# (www.kompas.com/rss → 404, path moved) were removed: both fail every cycle
+# and only inflate error_count. Re-add with verified, working feed URLs if you
+# want their coverage. Feeds remain best-effort — see run_ingestion.
 SOURCE_REGISTRY: list[RegisteredSource] = [
     # ANTARA (wire) — section feeds for volume.
     RegisteredSource(_ANTARA, "https://www.antaranews.com/rss/terkini.xml"),
@@ -40,10 +42,7 @@ SOURCE_REGISTRY: list[RegisteredSource] = [
     # CNN Indonesia.
     RegisteredSource(_CNN, "https://www.cnnindonesia.com/nasional/rss"),
     RegisteredSource(_CNN, "https://www.cnnindonesia.com/ekonomi/rss"),
-    # Tempo.
-    RegisteredSource(_TEMPO, "https://rss.tempo.co/nasional"),
-    RegisteredSource(_TEMPO, "https://rss.tempo.co/ekbis"),
-    # Best-effort (verify for your deployment).
-    RegisteredSource(_KOMPAS, "https://www.kompas.com/rss"),
+    # CNBC Indonesia.
     RegisteredSource(_CNBC, "https://www.cnbcindonesia.com/rss"),
 ]
+

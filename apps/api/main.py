@@ -145,7 +145,25 @@ async def lifespan(_app: FastAPI) -> AsyncIterator[None]:
       (the all-in-one deployment that serves real news).
     """
     cfg = get_settings()
+    if cfg.enable_scheduler:
+        # Surface the scheduler's per-run "ingest: new=… clusters=…" heartbeat.
+        # It's logged at INFO; without a handler at that level uvicorn filters
+        # it out, so `docker compose logs -f api` looks silent even though the
+        # 5-minute fetch loop is running. Attach a handler so the heartbeat (and
+        # "fetch failed" warnings) are visible.
+        import logging
+
+        sched_log = logging.getLogger("scheduler")
+        if not sched_log.handlers:
+            handler = logging.StreamHandler()
+            handler.setFormatter(
+                logging.Formatter("%(asctime)s %(levelname)s %(name)s: %(message)s")
+            )
+            sched_log.addHandler(handler)
+        sched_log.setLevel(logging.INFO)
+        sched_log.propagate = False
     if cfg.seed_api_key:
+
         # Register a durable, restart-stable key in THIS (serving) process's
         # access store. A key minted via `docker compose exec` lives in a
         # separate process and the server never sees it — see config.py.
